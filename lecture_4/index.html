@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        body{
+            background-color: #ffff;
+            color: #000;
+        }
+
+
+        .dark-mode{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="task_input">
+    <span id="error"></span>
+    <div class="tasks"></div>
+
+
+    <button class="button">open popup</button>
+    <button id="toggle">dark</button>
+
+    <input type="checkbox" id="check">
+    <h1 id="heading">Hello world</h1>
+
+    <div class="popup">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sunt.</p>
+        <button class="close_popup">X</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
