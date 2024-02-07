@@ -164,82 +164,76 @@
 //     console.error("Error:", error);
 //   });
 
-const task_input = document.getElementById("task_input");
 
-let todo_tasks = [];
+// const task_input = document.getElementById("task_input");
 
-function addTask() {
-  todo_tasks.push(task_input.value);
-  localStorage.setItem("tasks", task_input.value);
-  const getTodoTasksItem = localStorage.getItem("tasks");
-  console.log(todo_tasks);
+// let todo_tasks = [];
 
-  todo_tasks.forEach(() => {
-    const ul = document.createElement("ul");
-    const tasks_container = document.querySelector(".tasks");
-    tasks_container.appendChild(ul);
-    ul.innerHTML = `
-    <div style="display: flex">
-    <input type="checkbox" />
-    <li style="list-style: none">${getTodoTasksItem}</li>
-    <button>X</button>
-    </div>
-    `;
-    task_input.value = "";
-  });
-}
+// function saveTasksToLocalStorage() {
+//   localStorage.setItem('tasks', JSON.stringify(todo_tasks));
+// }
 
-task_input.addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
-    if (task_input.value === "") {
-      const error = document.getElementById("error");
-      error.style.color = "red";
-      error.style.fontSize = "10px";
-      error.style.display = "block";
-      error.textContent = "Please enter a valid task!";
-    } else {
-      addTask();
-    }
-  }
-});
+// function addTask(taskValue) {
+//   if (taskValue && !todo_tasks.includes(taskValue)) {
+//     todo_tasks.push(taskValue);
+//     task_input.value = ""; 
+//     saveTasksToLocalStorage(); 
+//   } else {
+//     return;
+//   }
 
-const button = document.querySelector(".button");
-const popup = document.querySelector(".popup");
-const close_popup = document.querySelector(".close_popup");
-const change_mode_btn = document.getElementById("toggle");
+//   renderTasks();
+// }
 
-change_mode_btn.addEventListener("click", () => {
-  if (change_mode_btn.textContent === "dark") {
-    change_mode_btn.textContent = "light";
-  } else {
-    change_mode_btn.textContent = "dark";
-  }
-  document.body.classList.toggle("dark-mode");
-});
+// function renderTasks() {
+//   const tasks_container = document.querySelector(".tasks");
+//   tasks_container.innerHTML = '';
 
-button.addEventListener("click", () => {
-  if (popup.style.display === "none") {
-    popup.style.display = "block";
-  } else {
-    popup.style.display = "block";
-  }
-});
+//   todo_tasks.forEach((task) => {
+//     const taskElement = document.createElement("div");
+//     taskElement.style.display = "flex";
 
-close_popup.addEventListener("click", () => {
-  popup.style.display = "none";
-});
+//     taskElement.innerHTML = `
+//       <div style="display: flex">
+//         <input type="checkbox" />
+//         <li style="list-style: none">${task}</li>
+//         <button class="delete">X</button>
+//       </div>
+//     `;
 
-const check = document.getElementById("check");
-const heading = document.getElementById("heading");
+//     tasks_container.appendChild(taskElement);
 
+//     const deleteButton = taskElement.querySelector(".delete");
+//     deleteButton.addEventListener('click', () => {
+//       todo_tasks = todo_tasks.filter(t => t !== task);
+//       saveTasksToLocalStorage(); 
+//       renderTasks(); 
+//     });
+//   });
+// }
 
-check.addEventListener("click", () => {
-  if (check.checked) {
-    heading.style.textDecoration = "line-through";
-    heading.style.color = 'gray'
-  }else{
-    heading.style.textDecoration = "none";
-    heading.style.color = 'black'
-  }
-  
-})
+// function loadTasksFromLocalStorage() {
+//   const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+//   if (storedTasks) {
+//     todo_tasks = storedTasks;
+//     renderTasks();
+//   }
+// }
+
+// task_input.addEventListener("keypress", (event) => {
+//   if (event.key === "Enter") {
+//     const taskValue = task_input.value.trim();
+//     if (taskValue === "") {
+//       const error = document.getElementById("error");
+//       error.style.color = "red";
+//       error.style.fontSize = "10px";
+//       error.style.display = "block";
+//       error.textContent = "Please enter a valid task!";
+//     } else {
+//       addTask(taskValue);
+//     }
+//   }
+// });
+
+// Load tasks when the document is loaded
+// document.addEventListener("DOMContentLoaded", loadTasksFromLocalStorage);
