@@ -35,6 +35,10 @@
           transform: rotate(360deg);
         }
       }
+
+      .second_container {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -47,6 +51,26 @@
       />
       <button id="search_button">Search</button>
       <span id="isLoading"></span> -->
+
+      <form>
+        <input type="email" id="email" placeholder="enter your email..." />
+        <input
+          type="password"
+          id="password"
+          placeholder="enter your password..."
+        />
+        <button id="signin">signin</button>
+      </form>
+
+      <div class="second_container">
+        <h1>Hello</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          voluptatum repellendus, sed, reiciendis nihil exercitationem neque
+          fugiat sunt maxime iure corrupti ipsa cupiditate odit libero autem ab
+          doloribus earum aliquid!
+        </p>
+      </div>
     </div>
 
     <script src="./app.js" type="module"></script>
