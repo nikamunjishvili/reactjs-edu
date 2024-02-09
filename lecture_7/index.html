@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      .loader {
+        width: 20px;
+        height: 20px;
+        border: 5px solid red;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <button id="dark_mode">dark</button>
+      <input
+        type="text"
+        id="search_username"
+        placeholder="search with github username..."
+      />
+      <button id="search_button">Search</button>
+      <span id="isLoading"></span> -->
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
