@@ -101,18 +101,18 @@
 
 // console.log(sortMyArray(numbers));
 
-const numbers = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  [8, 9, [10, 11, [232, 3232, [323, 32333]]]],
-  12,
-  13,
-];
+// const numbers = [
+//   1,
+//   2,
+//   3,
+//   4,
+//   5,
+//   6,
+//   7,
+//   [8, 9, [10, 11, [232, 3232, [323, 32333]]]],
+//   12,
+//   13,
+// ];
 //result = [1,2,3,4,5,6,7,8,9,10,11]
 
 // function recursiveData(elements) {
@@ -134,16 +134,16 @@ const numbers = [
 
 // 1 * 2 * 3 * 4 * n
 
-function recursiveFunction(n) {
-  if (n === 0) {
-    return 0;
-  }
+// function recursiveFunction(n) {
+//   if (n === 0) {
+//     return 0;
+//   }
   
-  if (n === 1) {
-    return 1;
-  }
+//   if (n === 1) {
+//     return 1;
+//   }
 
-  return recursiveFunction(n - 1) * n;
-}
+//   return recursiveFunction(n - 1) * n;
+// }
 
-console.log(recursiveFunction(10));
+// console.log(recursiveFunction(10));
